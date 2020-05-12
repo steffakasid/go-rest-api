@@ -10,6 +10,14 @@ I've just created a small Rest API to practice Go. In particular I wanted to tes
 . JSON handling in Go
 . Middleware (logging, auth etc.)
 
+== Preparation
+
+[source,sh]
+----
+$ go get
+$ go run .
+----
+
 == Further Links
 . https://golang.org/doc/code.html#Introduction
 . https://gobyexample.com
