@@ -1,0 +1,18 @@
+= GO Rest
+:author: Steffen Rumpf
+:date: 12.05.2020
+
+== Introduction
+
+I've just created a small Rest API to practice Go. In particular I wanted to test the following with Go:
+
+. Setup router with different routes
+. JSON handling in Go
+. Middleware (logging, auth etc.)
+
+== Further Links
+. https://golang.org/doc/code.html#Introduction
+. https://gobyexample.com
+. https://thenewstack.io/make-a-restful-json-api-go/
+. https://github.com/johan-lejdung/go-microservice-middleware-guide/blob/master/mw/logger.go
+. https://dev.to/johanlejdung/a-mini-guide-build-a-rest-api-as-a-go-microservice-together-with-mysql-27m2
