@@ -1,9 +1,10 @@
-package main
+package pkg
 
 import (
 	"net/http"
 
-	"github.com/steffakasid/rest-api/handler"
+	"github.com/gorilla/mux"
+	"github.com/steffakasid/go-rest-api/pkg/handler"
 )
 
 type Route struct {
@@ -30,4 +31,16 @@ var routes = Routes{
 		"/json",
 		handler.ReceiveJson,
 	},
+}
+
+func NewRouter() *mux.Router {
+	router := mux.NewRouter().StrictSlash(true)
+	for _, route := range routes {
+		router.
+			Methods(route.Method).
+			Path(route.Path).
+			Handler(route.Handler)
+
+	}
+	return router
 }

@@ -5,7 +5,8 @@ import (
 	"net/http"
 	"strconv"
 
-	"github.com/steffakasid/rest-api/middleware"
+	"github.com/steffakasid/go-rest-api/pkg"
+	"github.com/steffakasid/go-rest-api/pkg/middleware"
 	"github.com/urfave/negroni"
 )
 
@@ -24,8 +25,7 @@ func main() {
 
 func setupRouter(n *negroni.Negroni) {
 	log.Println("Initializing Router!")
-	router := NewRouter()
-
+	router := pkg.NewRouter()
 	n.Use(&middleware.Logger{})
 	n.UseHandler(router)
 }
